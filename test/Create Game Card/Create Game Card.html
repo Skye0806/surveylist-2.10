@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="icon" href="..\..\images\SheLeads Logo\logo@3x.png">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+		
+		<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+		<script src="..\..\scripts\configure_firebase\firebase_config.js"></script>
+		
+		<script src="../../scripts/input_validation/form_validator.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="Create Game Card.css">
+		<script src="Create Game Card.js"></script>
+	</head>
+	
+	<body>
+		<small>
+			- This PAGE is used for creating a game card for a specific organization
+			<br>- A game card will appear in the game_menu for any user that logs in with the specific organization
+			<br>*IMPORTANT* If the game you entered already exists for that specific organization, the information provided in this form will be used to overwrite what's saved in Firebase.
+		</small>
+		<form id="create-game-card-form">
+			<div class="form-group">
+				<label >Organization</label>
+				<input id="organizationInput" type="text" class="form-control no-valid-feedback" placeholder="Enter organization.">
+				<div class="hiddenInputFeedback" for="organizationInput">
+					Feedback
+				</div>
+			</div>
+			<div class="form-group">
+				<label style="">Game Name</label>
+				<input id="gameNameInput" type="text" class="form-control no-valid-feedback" placeholder="Enter game name.">
+				<div class="hiddenInputFeedback" for="gameNameInput">
+					Feedback
+				</div>
+				<small>
+					This assumes that you have the following file system:
+					<p style="padding-left: 30px; margin: 0">Main Folder</p>
+					<p style="padding-left: 60px; margin: 0">-> Games</p>
+					<p style="padding-left: 90px; margin: 0">- GameName (This folder should contain your game page)</p>
+					<p style="padding-left: 120px; margin: 0">+ index.html (game page)</p>
+					<p style="padding-left: 60px; margin: 0">-> game_menu</p>
+					<p style="padding-left: 90px; margin: 0">- images</p>
+					<p style="padding-left: 120px; margin: 0">+ game_images</p>
+					<p style="padding-left: 150px">~ GameName.png</p>
+					<p style="padding-left: 5px; margin: 0">1. Make sure that there is a game with the same name in the Games folder</p>
+					<p style="padding-left: 5px; margin: 0">2. Make sure that there is a image with the same name in'game_menu/image/game_images/GameName.png'</p>
+				</small>
+			</div>
+			<div class="form-group">
+				<label >Authors</label>
+				<input id="authorsInput" type="text" class="form-control" placeholder="Cassie, Daniella, Charlie">
+				<div class="hiddenInputFeedback" for="authorsInput">
+					Feedback
+				</div>
+			</div>
+			<div class="form-group">
+				<label >Star Count</label>
+				<input id="starsCountInput" type="number" class="form-control number-non-negative-validation" placeholder="1">
+				<div class="hiddenInputFeedback" for="starsCountInput">
+					Feedback
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Prerequisites</label>
+				<div id="prerequisites-inputs">
+					<button id="add-prerequisites-button" type="button" class="btn btn-primary col-auto mb-3">Add more prerequisites</button>
+				</div>
+				<br>
+				<small>
+					Enter the names of all the games that the user has to play before they have access to this game.
+					<br> If the user have not completed the prerequisites the game will be locked in the game_menu
+				</small>
+			</div>
+			<button id="submit" type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</body>
+</html>

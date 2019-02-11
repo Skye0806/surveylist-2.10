@@ -1,0 +1,330 @@
+
+#survey-section{
+	position: relative;
+	/* display: flex; */
+	flex-flow: row wrap;
+	justify-content: center;
+	/* align-items: stretch;
+	overflow: scroll; */
+	padding: 30px 10px;
+  background-color:white;
+  width: 100%;
+}
+
+#survey-section::-webkit-scrollbar{
+    display:none
+}
+#survey-section.survey-table{
+	margin-left: 20%;
+}
+#survey-section a{
+	text-decoration-color: red;
+}
+
+/* .outter-game-card{
+    width: 30%;
+    min-width: 300px;
+} */
+.surveyrecord{
+	 margin-left: 20%;
+}
+
+.game-card-container-prerequisites-completed-false{
+	cursor: default;
+}
+
+.survey-prerequisites-completed-false .surveyName,
+.survey-prerequisites-completed-false .surveyExpirydate,
+.survey-prerequisites-completed-false .surveyLength{
+	visibility:visible;
+	background-color:#8A2BE2;
+	/*opacity: 0.7;*/
+    /*filter:brightness(0.7);*/
+}
+.game-card-container-prerequisites-completed-false .game-image,
+.game-card-container-prerequisites-completed-false .canadian-flag{
+	/*opacity: 0.7;*/
+    filter:brightness(0.33);
+}
+
+
+
+/* auto width for each card*/
+/*.game-card-container-prerequisites-completed-true{
+    width: 30%;
+}
+*/
+
+/* .game-card-container-prerequisites-completed-true .game-preview .padlock{
+	visibility: hidden;
+}
+
+.game-card-container-prerequisites-completed-false .game-preview .padlock{
+	visibility: visible;
+} */
+
+.survey-table{
+  margin-left: 20%;
+	width: 300px;
+}
+
+.survey-reocord-prerequisites-completed-true.survey-table{
+    visiblity:visible;
+		background-color: black;
+}
+
+/* .game-card-container-prerequisites-completed-true .game-card:hover .game-preview .game-image,
+.game-card-container-prerequisites-completed-true .game-card:hover .game-preview .canadian-flag{
+    opacity: 0.66;
+}
+
+.game-card-container-prerequisites-completed-true .game-card:hover .game-preview .play-button{
+    visibility: visible;
+} */
+
+.surveyTopic{
+	/* margin-bottom: 10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap; */
+	background-color: red;
+}
+
+/* .game-card-header .game-name{
+	font-size: 20px;
+	color: #4b286d;
+}
+
+.game-card-subheader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	color: #000000;
+}
+.game-card-subheader .game-author{
+	width: 70%;
+}
+
+.game-card-subheader-star-section{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.game-card-subheader-star-section .star-image{
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+}
+
+.game-card-subheader-star-section .star-count{
+	margin-top: 3px;
+}
+
+.game-preview{
+	position: relative;
+}
+.game-preview .game-image{
+	width: 280px;
+	height: 192.5px;
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+/*	border: solid 4px #4b286d;*/
+/* }
+.game-preview .canadian-flag{
+	position: absolute;
+	height: 20px;
+	width: 40px;
+	bottom: 175px;
+	top: 10px;
+	left: 220px;
+}
+.game-preview .play-button{
+	visibility: hidden;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+}
+
+.game-preview .padlock{
+	position: absolute;
+	color: #9179c8;
+	top: calc(50% - 27px);
+	left: calc(50% - 27px);
+	text-shadow: 2.5px 2.5px 3px #272634;
+} */
+
+.button0{
+  background-color:white;
+  border-color:white;
+  display:inline-block;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button1{
+  background-color: #bb7faf;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button2{
+  background-color: #aecb5d;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button3{
+  background-color: #2abcc4;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button4{
+  background-color: #f7b219;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button5{
+  background-color: #bb7faf;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button6{
+  background-color: #fa8336;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button7{
+  background-color: #aecb5d;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+.button8{
+  background-color: #f7b219;
+  border-color:transparent;
+  border-radius: 4px;
+  display:inline-block;
+  cursor: pointer;
+  box-shadow: 11px 0px 11px rgba(0, 0, 0, 0.1);
+  width: 55px;
+  height: 55px;
+  margin-left:10px;
+  margin-bottom:7px;
+  margin-right: 18px;
+  margin-top: 8px;
+}
+/*.firstheading{
+	text-align: left;
+	margin-left: 41px;
+}
+.firstpara{
+	font-size: 80%;
+	text-align: left;
+	margin-left: 41px;
+}*/
+.survey-table.tr{
+margin-top:solid 1px black;
+text-align: left;
+}
+table.header tr{
+	text-align: center;
+	border-top: none;
+	border-bottom:solid 1px black;
+}
+table.header td{
+	border-left: none;
+	border-right:none;
+}
+tr
+{
+	text-align: left;
+	border-left: solid 1px black;
+	border-right: solid 1px black;
+	border-top: none;
+  border-bottom: solid 1px black;
+}
+td
+{
+	border-collapse: collapse;
+   border-right: solid 1px black;
+  border-left: solid 1px black;
+}
+
+
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	margin: 0px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
